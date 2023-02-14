@@ -105,7 +105,7 @@ public class SensorService extends Service implements SensorEventListener {
         powerManager = (PowerManager) getSystemService(POWER_SERVICE);
         wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "PassiveApp:tag");
         wakeLock.acquire();
-        MCT5.get().cycle(cycleTicker, MCT5.CONTINUOUSLY_REPEATS, 10000);
+        MCT5.get().cycle(cycleTicker, MCT5.CONTINUOUSLY_REPEATS, 60000);
         }
 
         public void sendBroadcast(){
